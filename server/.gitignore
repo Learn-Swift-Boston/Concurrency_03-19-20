@@ -42,7 +42,7 @@ playground.xcworkspace
 # Packages/
 # Package.pins
 # Package.resolved
-.build/
+# .build/
 # Add this line if you want to avoid checking in Xcode SPM integration.
 # .swiftpm/xcode
 
@@ -91,4 +91,3 @@ xcuserdata
 
 
 # End of https://www.gitignore.io/api/swift,vapor
-
