@@ -62,15 +62,31 @@
 			children = (
 				954C1CAB2415404400A9233A /* AppDelegate.swift */,
 				954C1CAD2415404400A9233A /* SceneDelegate.swift */,
-				954C1CC1241542C800A9233A /* NetworkingViewController.swift */,
-				954C1CC3241542D700A9233A /* DispatchGroupsViewController.swift */,
-				954C1CC5241542E100A9233A /* ParallelProcessingViewController.swift */,
+				954C1CC82415438200A9233A /* Networking */,
+				954C1CC72415437200A9233A /* View Controllers */,
 				954C1CB12415404400A9233A /* Main.storyboard */,
 				954C1CB42415404500A9233A /* Assets.xcassets */,
 				954C1CB62415404500A9233A /* LaunchScreen.storyboard */,
 				954C1CB92415404500A9233A /* Info.plist */,
 			);
 			path = GetStuff;
+			sourceTree = "<group>";
+		};
+		954C1CC72415437200A9233A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				954C1CC1241542C800A9233A /* NetworkingViewController.swift */,
+				954C1CC3241542D700A9233A /* DispatchGroupsViewController.swift */,
+				954C1CC5241542E100A9233A /* ParallelProcessingViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		954C1CC82415438200A9233A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
