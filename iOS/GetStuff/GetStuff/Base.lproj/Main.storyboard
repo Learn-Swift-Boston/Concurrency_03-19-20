@@ -10,7 +10,7 @@
         <!--Dispatch Groups-->
         <scene sceneID="02N-Xt-39w">
             <objects>
-                <viewController id="tvQ-rV-dEy" sceneMemberID="viewController">
+                <viewController id="tvQ-rV-dEy" customClass="DispatchGroupsViewController" customModule="GetStuff" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k8C-n7-ZwK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
         <!--Networking-->
         <scene sceneID="Jw3-Qq-nK5">
             <objects>
-                <viewController id="ZMH-kS-LES" sceneMemberID="viewController">
+                <viewController id="ZMH-kS-LES" customClass="NetworkingViewController" customModule="GetStuff" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p0b-MG-brH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
         <!--Parallel Processing-->
         <scene sceneID="AEz-Ri-I7r">
             <objects>
-                <viewController id="32z-0P-JRg" sceneMemberID="viewController">
+                <viewController id="32z-0P-JRg" customClass="ParallelProcessingViewController" customModule="GetStuff" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dEZ-gO-Jz0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

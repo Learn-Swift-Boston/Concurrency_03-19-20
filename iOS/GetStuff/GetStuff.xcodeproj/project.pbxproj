@@ -12,6 +12,9 @@
 		954C1CB32415404400A9233A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954C1CB12415404400A9233A /* Main.storyboard */; };
 		954C1CB52415404500A9233A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954C1CB42415404500A9233A /* Assets.xcassets */; };
 		954C1CB82415404500A9233A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954C1CB62415404500A9233A /* LaunchScreen.storyboard */; };
+		954C1CC2241542C800A9233A /* NetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C1CC1241542C800A9233A /* NetworkingViewController.swift */; };
+		954C1CC4241542D700A9233A /* DispatchGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C1CC3241542D700A9233A /* DispatchGroupsViewController.swift */; };
+		954C1CC6241542E100A9233A /* ParallelProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C1CC5241542E100A9233A /* ParallelProcessingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		954C1CB42415404500A9233A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		954C1CB72415404500A9233A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		954C1CB92415404500A9233A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		954C1CC1241542C800A9233A /* NetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewController.swift; sourceTree = "<group>"; };
+		954C1CC3241542D700A9233A /* DispatchGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchGroupsViewController.swift; sourceTree = "<group>"; };
+		954C1CC5241542E100A9233A /* ParallelProcessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallelProcessingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 			children = (
 				954C1CAB2415404400A9233A /* AppDelegate.swift */,
 				954C1CAD2415404400A9233A /* SceneDelegate.swift */,
+				954C1CC1241542C800A9233A /* NetworkingViewController.swift */,
+				954C1CC3241542D700A9233A /* DispatchGroupsViewController.swift */,
+				954C1CC5241542E100A9233A /* ParallelProcessingViewController.swift */,
 				954C1CB12415404400A9233A /* Main.storyboard */,
 				954C1CB42415404500A9233A /* Assets.xcassets */,
 				954C1CB62415404500A9233A /* LaunchScreen.storyboard */,
@@ -135,8 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				954C1CC4241542D700A9233A /* DispatchGroupsViewController.swift in Sources */,
 				954C1CAC2415404400A9233A /* AppDelegate.swift in Sources */,
+				954C1CC6241542E100A9233A /* ParallelProcessingViewController.swift in Sources */,
 				954C1CAE2415404400A9233A /* SceneDelegate.swift in Sources */,
+				954C1CC2241542C800A9233A /* NetworkingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
