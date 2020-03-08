@@ -1,6 +1,5 @@
 import Vapor
 
-/// Controls basic CRUD operations on `Todo`s.
 final class QuoteController {
     func randomQuote(_ req: Request) throws -> Quote {
         

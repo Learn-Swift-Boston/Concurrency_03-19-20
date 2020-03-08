@@ -23,4 +23,10 @@ public func routes(_ router: Router) throws {
     // MARK: - Concurrency Routes
     let quoteController = QuoteController()
     router.get("quote", use: quoteController.randomQuote)
+    
+    let productController = ProductController()
+    router.get("product", String.parameter, use: productController.get)
+    
+    let inventoryController = InventoryController()
+    router.get("inventory", String.parameter, use: inventoryController.get)
 }
