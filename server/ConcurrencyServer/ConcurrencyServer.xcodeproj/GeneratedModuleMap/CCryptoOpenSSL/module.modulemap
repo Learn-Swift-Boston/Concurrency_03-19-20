@@ -1,4 +1,0 @@
-module CCryptoOpenSSL {
-    umbrella "/Users/mdias/coding/meetups/concurrency/server/ConcurrencyServer/.build/checkouts/crypto/Sources/CCryptoOpenSSL/include"
-    export *
-}
