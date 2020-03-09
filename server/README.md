@@ -7,7 +7,8 @@ Vapor 3.1.10.
 ## Setup
 If you don't already have it, you'll need [Homebrew](https://brew.sh) to install
 Vapor. Simply run the following command in a terminal window.
-```
+
+```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
@@ -16,7 +17,7 @@ Vapor. Simply run the following command in a terminal window.
 First you must have Vapor installed. For more information, please see [Vapor's installation documentation](https://docs.vapor.codes/3.0/install/macos/). To
 install Vapor, paste the below two commands into a terminal window:
 
-```
+```sh
 brew tap vapor/tap
 brew install vapor/tap/vapor
 ```
@@ -24,7 +25,7 @@ brew install vapor/tap/vapor
 Once the installation is complete, you can verify Vapor was successfully
 installed by running the following:
 
-```
+```sh
 vapor --help
 ```
 
