@@ -29,4 +29,32 @@ enum APIClient {
         }.resume()
     }
 
+    static func getProduct(withId id: String, completion: @escaping (Result<Product, Error>) -> Void) {
+        let url = baseURL
+            .appendingPathComponent("product")
+            .appendingPathComponent(id)
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let data = data {
+                completion(Result { try decoder.decode(Product.self, from: data) })
+            } else {
+                completion(.failure(error ?? UnknownError(url: url, response: response)))
+            }
+        }.resume()
+    }
+
+    static func getInventory(forProductWithId id: String, completion: @escaping (Result<Inventory, Error>) -> Void) {
+        let url = baseURL
+            .appendingPathComponent("inventory")
+            .appendingPathComponent(id)
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let data = data {
+                completion(Result { try decoder.decode(Inventory.self, from: data) })
+            } else {
+                completion(.failure(error ?? UnknownError(url: url, response: response)))
+            }
+        }.resume()
+    }
+
 }

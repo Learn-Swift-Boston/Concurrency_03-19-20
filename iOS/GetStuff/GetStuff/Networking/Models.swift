@@ -14,11 +14,11 @@ struct Quote: Decodable {
 struct Product: Decodable {
     let id: String
     let name: String
-    let imageUrlString: String
+    let imageUrl: String
     let description: String
 }
 
-struct Stock: Decodable {
+struct Inventory: Decodable {
     let productId: String
     let stock: Int
 }

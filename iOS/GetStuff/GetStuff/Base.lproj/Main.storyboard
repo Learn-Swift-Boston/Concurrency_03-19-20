@@ -16,21 +16,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dispatch Groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9H-7d-TLp">
-                                <rect key="frame" x="96" y="273.5" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IF9-zW-tCD">
+                                <rect key="frame" x="10" y="10" width="300" height="141"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxQ-ER-9W5">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 in stock" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8d-mc-jwS">
+                                        <rect key="frame" x="0.0" y="28.5" width="300" height="18"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyA-9J-lz0">
+                                        <rect key="frame" x="0.0" y="54.5" width="300" height="86.5"/>
+                                        <string key="text">Product Description, which may go on for several lines. Your dummy text should be similar to the real text so you can be sure your layout will work.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4NB-1X-YGn">
+                                <rect key="frame" x="141.5" y="241" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q21-8m-6F2">
+                                <rect key="frame" x="114" y="475" width="92" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="lo0-mP-geq"/>
+                                </constraints>
+                                <state key="normal" title="Load Product"/>
+                                <connections>
+                                    <action selector="loadProductTapped:" destination="tvQ-rV-dEy" eventType="touchUpInside" id="OeO-2J-YNs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="e9H-7d-TLp" firstAttribute="centerY" secondItem="k8C-n7-ZwK" secondAttribute="centerY" id="24d-4c-75t"/>
-                            <constraint firstItem="e9H-7d-TLp" firstAttribute="centerX" secondItem="k8C-n7-ZwK" secondAttribute="centerX" id="4lJ-G9-DI9"/>
+                            <constraint firstItem="Jbi-vX-YPO" firstAttribute="bottom" secondItem="q21-8m-6F2" secondAttribute="bottom" id="0h7-PX-YVI"/>
+                            <constraint firstItem="4NB-1X-YGn" firstAttribute="centerY" secondItem="Jbi-vX-YPO" secondAttribute="centerY" id="Bx3-0p-Xqx"/>
+                            <constraint firstItem="IF9-zW-tCD" firstAttribute="leading" secondItem="Jbi-vX-YPO" secondAttribute="leading" constant="10" id="Fie-gf-zv3"/>
+                            <constraint firstAttribute="trailing" secondItem="IF9-zW-tCD" secondAttribute="trailing" constant="10" id="MDz-fb-MyA"/>
+                            <constraint firstItem="q21-8m-6F2" firstAttribute="centerX" secondItem="Jbi-vX-YPO" secondAttribute="centerX" id="RAE-QV-sni"/>
+                            <constraint firstItem="IF9-zW-tCD" firstAttribute="top" secondItem="Jbi-vX-YPO" secondAttribute="top" constant="10" id="cNo-5A-6ft"/>
+                            <constraint firstItem="4NB-1X-YGn" firstAttribute="centerX" secondItem="Jbi-vX-YPO" secondAttribute="centerX" id="csh-aK-6M0"/>
+                            <constraint firstItem="q21-8m-6F2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IF9-zW-tCD" secondAttribute="bottom" constant="8" symbolic="YES" id="ttK-6L-TXW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jbi-vX-YPO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dispatch Groups" image="cart" catalog="system" id="xHY-xj-eia"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="dyA-9J-lz0" id="eTa-dh-ANI"/>
+                        <outlet property="productStackView" destination="IF9-zW-tCD" id="3cO-vM-aNa"/>
+                        <outlet property="spinner" destination="4NB-1X-YGn" id="b4d-LI-b1h"/>
+                        <outlet property="stockLabel" destination="L8d-mc-jwS" id="WgB-7t-87M"/>
+                        <outlet property="titleLabel" destination="GxQ-ER-9W5" id="7QX-fd-YoK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Owc-Cu-e9A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
