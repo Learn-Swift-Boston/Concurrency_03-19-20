@@ -1,0 +1,4 @@
+module CNIOOpenSSL {
+    umbrella "/Users/mdias/coding/meetups/concurrency/server/ConcurrencyServer/.build/checkouts/swift-nio-ssl/Sources/CNIOOpenSSL/include"
+    export *
+}
