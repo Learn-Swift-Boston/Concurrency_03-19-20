@@ -15,6 +15,8 @@
 		954C1CC2241542C800A9233A /* NetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C1CC1241542C800A9233A /* NetworkingViewController.swift */; };
 		954C1CC4241542D700A9233A /* DispatchGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C1CC3241542D700A9233A /* DispatchGroupsViewController.swift */; };
 		954C1CC6241542E100A9233A /* ParallelProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C1CC5241542E100A9233A /* ParallelProcessingViewController.swift */; };
+		954C1CCA2415C30400A9233A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C1CC92415C30400A9233A /* APIClient.swift */; };
+		95E7FC5D2415D34A000E471D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7FC5C2415D34A000E471D /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		954C1CC1241542C800A9233A /* NetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewController.swift; sourceTree = "<group>"; };
 		954C1CC3241542D700A9233A /* DispatchGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchGroupsViewController.swift; sourceTree = "<group>"; };
 		954C1CC5241542E100A9233A /* ParallelProcessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallelProcessingViewController.swift; sourceTree = "<group>"; };
+		954C1CC92415C30400A9233A /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		95E7FC5C2415D34A000E471D /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 		954C1CC82415438200A9233A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				95E7FC5C2415D34A000E471D /* Models.swift */,
+				954C1CC92415C30400A9233A /* APIClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 				954C1CC6241542E100A9233A /* ParallelProcessingViewController.swift in Sources */,
 				954C1CAE2415404400A9233A /* SceneDelegate.swift in Sources */,
 				954C1CC2241542C800A9233A /* NetworkingViewController.swift in Sources */,
+				954C1CCA2415C30400A9233A /* APIClient.swift in Sources */,
+				95E7FC5D2415D34A000E471D /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

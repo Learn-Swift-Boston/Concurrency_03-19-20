@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,21 +44,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Networking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE8-im-rfM">
-                                <rect key="frame" x="116" y="273.5" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KPD-Pb-r7d">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVl-lB-HaZ" userLabel="Spacer">
+                                        <rect key="frame" x="40" y="0.0" width="240" height="47.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLV-yA-7Zo">
+                                        <rect key="frame" x="0.0" y="55.5" width="320" height="356"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9c-Dd-IU1">
+                                                <rect key="frame" x="8" y="8" width="304" height="114"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="100"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv1-im-gNq">
+                                                <rect key="frame" x="8" y="123.5" width="304" height="86.5"/>
+                                                <string key="text">You have to go through the falling down in order to learn to walk. It helps to know that you can survive it. That’s an education in itself.</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="— Carol Burnett" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKc-bt-xMG">
+                                                <rect key="frame" x="8" y="213.5" width="304" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="”" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfm-bh-ZBC">
+                                                <rect key="frame" x="8" y="234" width="304" height="114"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="100"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uf5-J5-cUT" userLabel="Spacer">
+                                        <rect key="frame" x="40" y="419.5" width="240" height="47.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sD1-lS-mM0">
+                                        <rect key="frame" x="124.5" y="475" width="71" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="b9I-LV-4mY"/>
+                                        </constraints>
+                                        <state key="normal" title="Get Quote"/>
+                                        <connections>
+                                            <action selector="getQuoteTapped:" destination="ZMH-kS-LES" eventType="touchUpInside" id="KYc-w1-axm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HVl-lB-HaZ" firstAttribute="height" secondItem="uf5-J5-cUT" secondAttribute="height" id="5Ml-GD-EBW"/>
+                                </constraints>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="mkg-Cv-W5j">
+                                <rect key="frame" x="141.5" y="215" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="gE8-im-rfM" firstAttribute="centerY" secondItem="p0b-MG-brH" secondAttribute="centerY" id="3Fu-RR-Y1N"/>
-                            <constraint firstItem="gE8-im-rfM" firstAttribute="centerX" secondItem="p0b-MG-brH" secondAttribute="centerX" id="HN9-hi-RTe"/>
+                            <constraint firstAttribute="trailing" secondItem="KPD-Pb-r7d" secondAttribute="trailing" id="40B-30-SQw"/>
+                            <constraint firstItem="KPD-Pb-r7d" firstAttribute="top" secondItem="OP3-0z-5r3" secondAttribute="top" id="6Ew-8j-Lqj"/>
+                            <constraint firstItem="mkg-Cv-W5j" firstAttribute="centerY" secondItem="qLV-yA-7Zo" secondAttribute="centerY" id="Rrc-gU-XE6"/>
+                            <constraint firstItem="mkg-Cv-W5j" firstAttribute="centerX" secondItem="qLV-yA-7Zo" secondAttribute="centerX" id="Xas-Jc-Pd0"/>
+                            <constraint firstItem="OP3-0z-5r3" firstAttribute="bottom" secondItem="KPD-Pb-r7d" secondAttribute="bottom" id="sri-Hz-N3a"/>
+                            <constraint firstItem="KPD-Pb-r7d" firstAttribute="leading" secondItem="OP3-0z-5r3" secondAttribute="leading" id="yRM-cf-zaf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OP3-0z-5r3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Networking" image="globe" catalog="system" id="cCh-R5-Rxc"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="pKc-bt-xMG" id="zNG-Mg-Vmp"/>
+                        <outlet property="quoteLabel" destination="Tv1-im-gNq" id="XUI-FB-bV3"/>
+                        <outlet property="quoteStack" destination="qLV-yA-7Zo" id="9cJ-Wv-uga"/>
+                        <outlet property="spinner" destination="mkg-Cv-W5j" id="YFf-d1-zEo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQA-b6-rBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
