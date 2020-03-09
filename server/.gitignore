@@ -85,9 +85,9 @@ iOSInjectionProject/
 Config/secrets
 
 ### Vapor Patch ###
-Packages
+# Packages
 xcuserdata
-*.xcodeproj
+# *.xcodeproj
 
 
 # End of https://www.gitignore.io/api/swift,vapor
