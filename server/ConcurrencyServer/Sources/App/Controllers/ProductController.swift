@@ -3,7 +3,8 @@ import Vapor
 final class ProductController {
     func get(_ req: Request) throws -> Product {
         let id = try req.parameters.next(String.self)
-        
+
+        sleep(2) // simulate server slowness
         return Product(id: id,
                        name: "Purell Hand Sanitizer",
                        description: "The best, most price gouged, tool for fighting pandemics. Now sold in partial bottles. Note some partial bottles were collected from trash cans. So please use Purell Bottle Sanitizer™ to sanitizer your hand sanitizer before and after sanitizing your hands.",
