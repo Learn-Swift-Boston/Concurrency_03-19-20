@@ -4,6 +4,13 @@ This is a contrived server built for the intent of talking about concurrency, in
 iOS at the March 2020 Learn Swift Boston meetup. The server is developed using
 Vapor 3.1.10.
 
+## Setup
+If you don't already have it, you'll need [Homebrew](https://brew.sh) to install
+Vapor. Simply run the following command in a terminal window.
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
 ## Installing The Server
 
 First you must have Vapor installed. For more information, please see [Vapor's installation documentation](https://docs.vapor.codes/3.0/install/macos/). To
