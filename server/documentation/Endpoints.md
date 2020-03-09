@@ -4,7 +4,7 @@ These are a collection of endpoints to be used in the March 2020 Learn Swift
 Boston session on concurrency. They are broken down by topic.
 
 ## Networking
-`GET \quote`
+`GET /quote`
 
 Returns one of four quotes, randomly.
 <details>
@@ -22,7 +22,7 @@ Returns one of four quotes, randomly.
 ---
 
 ## Dispatch Groups
-`GET \product\:productId`
+`GET /product/:productId`
 
 Returns a product for the given product ID (always Purell).
 <details>
@@ -40,7 +40,7 @@ Returns a product for the given product ID (always Purell).
 
 &nbsp;
 
-`GET \inventory\:productId`
+`GET /inventory/:productId`
 
 Returns the available inventory for the given product ID (random number 1-10).
 <details>
