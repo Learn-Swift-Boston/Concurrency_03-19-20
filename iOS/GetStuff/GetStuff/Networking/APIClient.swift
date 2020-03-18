@@ -15,11 +15,11 @@ enum APIClient {
         let response: URLResponse?
     }
 
-    private static let baseURL = URL(string: "http://localhost:8080")!
+    private static let localServerURL = URL(string: "http://localhost:8080")!
     private static let decoder = JSONDecoder()
 
     static func getQuotes(completion: @escaping (Result<Quote, Error>) -> Void) {
-        let url = baseURL.appendingPathComponent("quote")
+        let url = localServerURL.appendingPathComponent("quote")
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
                 completion(Result { try decoder.decode(Quote.self, from: data) })
@@ -30,7 +30,7 @@ enum APIClient {
     }
 
     static func getProduct(withId id: String, completion: @escaping (Result<Product, Error>) -> Void) {
-        let url = baseURL
+        let url = localServerURL
             .appendingPathComponent("product")
             .appendingPathComponent(id)
 
@@ -44,7 +44,7 @@ enum APIClient {
     }
 
     static func getInventory(forProductWithId id: String, completion: @escaping (Result<Inventory, Error>) -> Void) {
-        let url = baseURL
+        let url = localServerURL
             .appendingPathComponent("inventory")
             .appendingPathComponent(id)
 
