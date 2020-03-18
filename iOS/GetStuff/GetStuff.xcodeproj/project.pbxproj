@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		952F3EF22422CEA300FE2A16 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952F3EF12422CEA300FE2A16 /* ImageCell.swift */; };
 		954C1CAC2415404400A9233A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C1CAB2415404400A9233A /* AppDelegate.swift */; };
 		954C1CAE2415404400A9233A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954C1CAD2415404400A9233A /* SceneDelegate.swift */; };
 		954C1CB32415404400A9233A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954C1CB12415404400A9233A /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		952F3EF12422CEA300FE2A16 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		954C1CA82415404400A9233A /* GetStuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetStuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		954C1CAB2415404400A9233A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		954C1CAD2415404400A9233A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				954C1CC1241542C800A9233A /* NetworkingViewController.swift */,
 				954C1CC3241542D700A9233A /* DispatchGroupsViewController.swift */,
 				954C1CC5241542E100A9233A /* ParallelProcessingViewController.swift */,
+				952F3EF12422CEA300FE2A16 /* ImageCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				954C1CC6241542E100A9233A /* ParallelProcessingViewController.swift in Sources */,
 				954C1CAE2415404400A9233A /* SceneDelegate.swift in Sources */,
 				954C1CC2241542C800A9233A /* NetworkingViewController.swift in Sources */,
+				952F3EF22422CEA300FE2A16 /* ImageCell.swift in Sources */,
 				954C1CCA2415C30400A9233A /* APIClient.swift in Sources */,
 				95E7FC5D2415D34A000E471D /* Models.swift in Sources */,
 			);
