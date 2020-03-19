@@ -18,7 +18,7 @@ class ParallelProcessingViewController: UIViewController {
 
     private var items: [Item] = Array(repeating: .empty, count: 150)
 
-    private let mathQueue = DispatchQueue(label: "mathQueue", attributes: [])
+    private let mathQueue = DispatchQueue(label: "mathQueue", attributes: [.concurrent])
 
     // Outlets
 
