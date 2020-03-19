@@ -34,18 +34,20 @@ class ParallelProcessingViewController: UIViewController {
 
     }
 
+    // Computed Properties
+
+    var imageSize: CGSize {
+        // Without floor(), the cells are too wide, but with it,
+        // they're a hair too narrow, so we get white lines between the cells.
+        let sideLength = floor(view.bounds.width / 4)
+        return CGSize(width: sideLength, height: sideLength)
+    }
+
     // Lifecycle
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        // Without floor(), the cells are too wide, but with it,
-        // they're a hair too narrow, so we get white lines between the cells.
-        let imageSideLength = floor(view.bounds.width / 4)
-        let newSize = CGSize(
-            width: imageSideLength,
-            height: imageSideLength
-        )
-        flowLayout.itemSize = newSize
+        flowLayout.itemSize = imageSize
     }
 }
 
@@ -62,7 +64,10 @@ private extension ParallelProcessingViewController {
                 switch result {
                 case .success(let imageData):
                     if let uiImage = UIImage(data: imageData) {
-                        self.updateItem(to: .loaded(uiImage), atIndex: index)
+                        let resized = UIGraphicsImageRenderer(size: self.imageSize).image { context in
+                            uiImage.draw(in: CGRect(origin: .zero, size: self.imageSize))
+                        }
+                        self.updateItem(to: .loaded(resized), atIndex: index)
                     } else {
                         print("Error decoding image \(index) from data: \(String(data: imageData, encoding: .utf8) ?? imageData.description)")
                         // TODO: add error state to cell
