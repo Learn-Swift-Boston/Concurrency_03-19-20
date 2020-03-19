@@ -18,11 +18,6 @@ class ParallelProcessingViewController: UIViewController {
 
     private var items: [Item] = Array(repeating: .empty, count: 150)
 
-    func updateItem(to newItem: Item, atIndex index: Int) {
-        items[index] = newItem
-        collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
-    }
-
     // Outlets
 
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -63,6 +58,11 @@ private extension ParallelProcessingViewController {
             let newItem = Item.loaded(input: index, output: result)
             self.updateItem(to: newItem, atIndex: index)
         }
+    }
+
+    func updateItem(to newItem: Item, atIndex index: Int) {
+        items[index] = newItem
+        collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
     }
 
     func doExpensiveMath(_ input: Int) -> Double {
