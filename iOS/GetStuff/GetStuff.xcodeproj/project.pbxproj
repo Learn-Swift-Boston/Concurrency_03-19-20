@@ -114,6 +114,8 @@
 			dependencies = (
 			);
 			name = GetStuff;
+			packageProductDependencies = (
+			);
 			productName = GetStuff;
 			productReference = 954C1CA82415404400A9233A /* GetStuff.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +144,8 @@
 				Base,
 			);
 			mainGroup = 954C1C9F2415404400A9233A;
+			packageReferences = (
+			);
 			productRefGroup = 954C1CA92415404400A9233A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

@@ -10,12 +10,6 @@ import UIKit
 
 final class ImageCell: UICollectionViewCell {
 
-    enum State {
-        case empty
-        case loading
-        case loaded(UIImage)
-    }
-
     var number: Int {
         get {
             Int(numberLabel.text ?? "") ?? 0
@@ -25,9 +19,9 @@ final class ImageCell: UICollectionViewCell {
         }
     }
 
-    var state: State = .empty {
+    var item: Item = .empty {
         didSet {
-            switch state {
+            switch item {
             case .empty:
                 spinner.stopAnimating()
                 imageView.isHidden = true

@@ -15,6 +15,11 @@ enum APIClient {
         let response: URLResponse?
     }
 
+    // Represents an HTTP 404 error
+    struct NotFoundError: Error {
+        let url: URL
+    }
+
     private static let localServerURL = URL(string: "http://localhost:8080")!
     private static let decoder = JSONDecoder()
 
@@ -57,16 +62,21 @@ enum APIClient {
         }.resume()
     }
 
-    static func getImageData(withId id: Int, onQueue: DispatchQueue = .main, completion: @escaping (Result<Data, Error>) -> Void) {
-        let url = URL(string: "https://picsum.photos/id/\(id)/1000/1000")!
+    static func getImageData(withId id: Int, onQueue queue: DispatchQueue = .main, completion: @escaping (Result<Data, Error>) -> Void) {
+        let imageSideLength = 1000
+        let url = URL(string: "https://picsum.photos/id/\(id)/\(imageSideLength)/\(imageSideLength)")!
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let data = data {
-                completion(.success(data))
-            } else {
-                completion(.failure(error ?? UnknownError(url: url, response: response)))
+            queue.async {
+                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 404 {
+                    completion(.failure(NotFoundError(url: url)))
+                } else if let data = data {
+                    completion(.success(data))
+                } else {
+                    completion(.failure(error ?? UnknownError(url: url, response: response)))
+                }
             }
-        }
+        }.resume()
     }
 
 }
