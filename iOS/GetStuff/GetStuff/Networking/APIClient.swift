@@ -24,42 +24,15 @@ enum APIClient {
     private static let decoder = JSONDecoder()
 
     static func getQuotes(completion: @escaping (Result<Quote, Error>) -> Void) {
-        let url = localServerURL.appendingPathComponent("quote")
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let data = data {
-                completion(Result { try decoder.decode(Quote.self, from: data) })
-            } else {
-                completion(.failure(error ?? UnknownError(url: url, response: response)))
-            }
-        }.resume()
+        // TODO
     }
 
     static func getProduct(withId id: String, completion: @escaping (Result<Product, Error>) -> Void) {
-        let url = localServerURL
-            .appendingPathComponent("product")
-            .appendingPathComponent(id)
-
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let data = data {
-                completion(Result { try decoder.decode(Product.self, from: data) })
-            } else {
-                completion(.failure(error ?? UnknownError(url: url, response: response)))
-            }
-        }.resume()
+        // TODO
     }
 
     static func getInventory(forProductWithId id: String, completion: @escaping (Result<Inventory, Error>) -> Void) {
-        let url = localServerURL
-            .appendingPathComponent("inventory")
-            .appendingPathComponent(id)
-
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let data = data {
-                completion(Result { try decoder.decode(Inventory.self, from: data) })
-            } else {
-                completion(.failure(error ?? UnknownError(url: url, response: response)))
-            }
-        }.resume()
+        // TODO
     }
 
 }

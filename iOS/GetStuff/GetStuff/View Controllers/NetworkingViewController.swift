@@ -36,32 +36,7 @@ class NetworkingViewController: UIViewController {
 private extension NetworkingViewController {
 
     @IBAction func getQuoteTapped(_ sender: UIButton) {
-        sender.isUserInteractionEnabled = false
-        quoteStack.alpha = 0
-        spinner.startAnimating()
-        APIClient.getQuotes { result in
-            DispatchQueue.main.async {
-                // Whether success or failure, make sure this is run to reset
-                // the UI to a clean state so we can try again.
-                defer {
-                    self.spinner.stopAnimating()
-                    sender.isUserInteractionEnabled = true
-                }
-                switch result {
-                case .success(let quote):
-                    self.quoteLabel.text = quote.quote
-                    self.authorLabel.text = "— \(quote.author)"
-                    UIView.animate(withDuration: 0.3) {
-                        self.quoteStack.alpha = 1
-                    }
-                case .failure(let error):
-                    print("error fetching quote: \(error)")
-                    let alert = UIAlertController(title: "Error loading quote", message: error.localizedDescription, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                }
-            }
-        }
+        // TODO
     }
 
 }

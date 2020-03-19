@@ -51,24 +51,11 @@ class ParallelProcessingViewController: UIViewController {
 private extension ParallelProcessingViewController {
 
     @IBAction func doMathTapped(_ sender: UIButton) {
-        // set all states to .loading initially
-        items = Array(repeating: .loading, count: items.count)
-        collectionView.reloadData()
-
-        for index in self.items.indices {
-            mathQueue.async {
-                let result = self.doExpensiveMath(index)
-                DispatchQueue.main.async {
-                    let newItem = Item.loaded(input: index, output: result)
-                    self.updateItem(to: newItem, atIndex: index)
-                }
-            }
-        }
+        // TODO
     }
 
     func updateItem(to newItem: Item, atIndex index: Int) {
-        items[index] = newItem
-        collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
+        // TODO
     }
 
     func doExpensiveMath(_ input: Int) -> Double {
