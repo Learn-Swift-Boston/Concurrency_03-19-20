@@ -62,21 +62,4 @@ enum APIClient {
         }.resume()
     }
 
-    static func getImageData(withId id: Int, onQueue queue: DispatchQueue = .main, completion: @escaping (Result<Data, Error>) -> Void) {
-        let imageSideLength = 4000
-        let url = URL(string: "https://picsum.photos/id/\(id)/\(imageSideLength)/\(imageSideLength)")!
-
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            queue.async {
-                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 404 {
-                    completion(.failure(NotFoundError(url: url)))
-                } else if let data = data {
-                    completion(.success(data))
-                } else {
-                    completion(.failure(error ?? UnknownError(url: url, response: response)))
-                }
-            }
-        }.resume()
-    }
-
 }

@@ -11,7 +11,7 @@ import UIKit
 enum Item: Hashable {
     case empty
     case loading
-    case loaded(UIImage)
+    case loaded(input: Int, output: Double)
 }
 
 class ParallelProcessingViewController: UIViewController {
@@ -36,7 +36,7 @@ class ParallelProcessingViewController: UIViewController {
 
     // Computed Properties
 
-    var imageSize: CGSize {
+    var itemSize: CGSize {
         // Without floor(), the cells are too wide, but with it,
         // they're a hair too narrow, so we get white lines between the cells.
         let sideLength = floor(view.bounds.width / 4)
@@ -47,39 +47,27 @@ class ParallelProcessingViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        flowLayout.itemSize = imageSize
+        flowLayout.itemSize = itemSize
     }
 }
 
 private extension ParallelProcessingViewController {
 
-    @IBAction func fetchImagesTapped(_ sender: UIButton) {
+    @IBAction func doMathTapped(_ sender: UIButton) {
         // set all states to .loading initially
         items = Array(repeating: .loading, count: items.count)
         collectionView.reloadData()
 
-        // fetch images
-        for index in items.indices {
-            APIClient.getImageData(withId: index, onQueue: .main) { result in
-                switch result {
-                case .success(let imageData):
-                    if let uiImage = UIImage(data: imageData) {
-                        let resized = UIGraphicsImageRenderer(size: self.imageSize).image { context in
-                            uiImage.draw(in: CGRect(origin: .zero, size: self.imageSize))
-                        }
-                        self.updateItem(to: .loaded(resized), atIndex: index)
-                    } else {
-                        print("Error decoding image \(index) from data: \(String(data: imageData, encoding: .utf8) ?? imageData.description)")
-                        // TODO: add error state to cell
-                        self.updateItem(to: .empty, atIndex: index)
-                    }
-                case .failure(let error):
-                    print("Error loading image \(index): \(error)")
-                    // TODO: add error state to cell
-                    self.updateItem(to: .empty, atIndex: index)
-                }
-            }
+        for index in self.items.indices {
+            let result = self.doExpensiveMath(index)
+            let newItem = Item.loaded(input: index, output: result)
+            self.updateItem(to: newItem, atIndex: index)
         }
+    }
+
+    func doExpensiveMath(_ input: Int) -> Double {
+        (0...100_000)
+            .reduce(Double(input)) { accumulator, next in sin(accumulator) }
     }
 
 }
@@ -90,11 +78,10 @@ extension ParallelProcessingViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as? ImageCell else { fatalError("Problem dequeueing cell") }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "resultCell", for: indexPath) as? ResultCell else { fatalError("Problem dequeueing cell") }
         // configure cell
         let item = items[indexPath.item]
         cell.item = item
-        cell.number = indexPath.item
         return cell
     }
 }

@@ -194,41 +194,34 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="xJD-Jz-VZQ" customClass="ImageCell" customModule="GetStuff" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="resultCell" id="xJD-Jz-VZQ" customClass="ResultCell" customModule="GetStuff" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NZa-dY-OW4">
                                                     <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tdI-Bx-T6W">
-                                                            <rect key="frame" x="21" y="28" width="51.5" height="38.5"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="function" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tdI-Bx-T6W">
+                                                            <rect key="frame" x="18" y="31" width="57" height="32"/>
                                                             <color key="tintColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                             </preferredSymbolConfiguration>
                                                         </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKd-oH-YfC">
-                                                            <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
-                                                        </imageView>
                                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="4V5-74-HdV">
                                                             <rect key="frame" x="36.5" y="36.5" width="20" height="20"/>
                                                         </activityIndicatorView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8888" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbI-ao-eRV">
-                                                            <rect key="frame" x="42.5" y="67" width="42.5" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0: 0.0054487643" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbI-ao-eRV">
+                                                            <rect key="frame" x="8" y="8" width="77" height="77"/>
                                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="wbI-ao-eRV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NZa-dY-OW4" secondAttribute="leading" constant="8" id="0y5-gv-ScB"/>
+                                                        <constraint firstItem="wbI-ao-eRV" firstAttribute="leading" secondItem="NZa-dY-OW4" secondAttribute="leading" constant="8" id="0y5-gv-ScB"/>
                                                         <constraint firstItem="tdI-Bx-T6W" firstAttribute="centerX" secondItem="NZa-dY-OW4" secondAttribute="centerX" id="9SU-HF-bJb"/>
-                                                        <constraint firstAttribute="trailing" secondItem="iKd-oH-YfC" secondAttribute="trailing" id="UbC-jq-2pq"/>
-                                                        <constraint firstItem="iKd-oH-YfC" firstAttribute="leading" secondItem="NZa-dY-OW4" secondAttribute="leading" id="Ul0-pp-dny"/>
-                                                        <constraint firstAttribute="bottom" secondItem="iKd-oH-YfC" secondAttribute="bottom" id="YbD-TZ-iib"/>
                                                         <constraint firstItem="tdI-Bx-T6W" firstAttribute="centerY" secondItem="NZa-dY-OW4" secondAttribute="centerY" id="asI-78-INS"/>
-                                                        <constraint firstItem="iKd-oH-YfC" firstAttribute="top" secondItem="NZa-dY-OW4" secondAttribute="top" id="h9w-zM-H4Q"/>
+                                                        <constraint firstItem="wbI-ao-eRV" firstAttribute="top" secondItem="NZa-dY-OW4" secondAttribute="top" constant="8" id="rSx-YB-Pyk"/>
                                                         <constraint firstAttribute="bottom" secondItem="wbI-ao-eRV" secondAttribute="bottom" constant="8" id="ryg-Vd-1af"/>
                                                         <constraint firstAttribute="trailing" secondItem="wbI-ao-eRV" secondAttribute="trailing" constant="8" id="sJb-sO-kSO"/>
                                                         <constraint firstItem="4V5-74-HdV" firstAttribute="centerY" secondItem="NZa-dY-OW4" secondAttribute="centerY" id="w1A-Qg-H5a"/>
@@ -237,7 +230,6 @@
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="93" height="93"/>
                                                 <connections>
-                                                    <outlet property="imageView" destination="iKd-oH-YfC" id="yUF-mx-uB2"/>
                                                     <outlet property="numberLabel" destination="wbI-ao-eRV" id="Cxy-fL-TYV"/>
                                                     <outlet property="placeholderImageView" destination="tdI-Bx-T6W" id="1XV-bu-QVK"/>
                                                     <outlet property="spinner" destination="4V5-74-HdV" id="D6z-0s-xOe"/>
@@ -254,9 +246,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Bzd-I2-f2l"/>
                                         </constraints>
-                                        <state key="normal" title="Fetch Images"/>
+                                        <state key="normal" title="Do Math"/>
                                         <connections>
-                                            <action selector="fetchImagesTapped:" destination="32z-0P-JRg" eventType="touchUpInside" id="FzO-0x-Qyx"/>
+                                            <action selector="doMathTapped:" destination="32z-0P-JRg" eventType="touchUpInside" id="FzO-0x-Qyx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -304,8 +296,8 @@
     </scenes>
     <resources>
         <image name="cart" catalog="system" width="64" height="50"/>
+        <image name="function" catalog="system" width="64" height="34"/>
         <image name="globe" catalog="system" width="64" height="60"/>
-        <image name="photo" catalog="system" width="64" height="46"/>
         <image name="photo.on.rectangle" catalog="system" width="64" height="48"/>
     </resources>
 </document>
