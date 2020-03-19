@@ -18,6 +18,8 @@ class ParallelProcessingViewController: UIViewController {
 
     private var items: [Item] = Array(repeating: .empty, count: 150)
 
+    private let mathQueue = DispatchQueue(label: "mathQueue", attributes: [])
+
     // Outlets
 
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -54,9 +56,13 @@ private extension ParallelProcessingViewController {
         collectionView.reloadData()
 
         for index in self.items.indices {
-            let result = self.doExpensiveMath(index)
-            let newItem = Item.loaded(input: index, output: result)
-            self.updateItem(to: newItem, atIndex: index)
+            mathQueue.async {
+                let result = self.doExpensiveMath(index)
+                DispatchQueue.main.async {
+                    let newItem = Item.loaded(input: index, output: result)
+                    self.updateItem(to: newItem, atIndex: index)
+                }
+            }
         }
     }
 
@@ -66,7 +72,7 @@ private extension ParallelProcessingViewController {
     }
 
     func doExpensiveMath(_ input: Int) -> Double {
-        (0...100_000)
+        (0...1_000_000)
             .reduce(Double(input)) { accumulator, next in sin(accumulator) }
     }
 
