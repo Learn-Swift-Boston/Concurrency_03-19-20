@@ -63,7 +63,7 @@ enum APIClient {
     }
 
     static func getImageData(withId id: Int, onQueue queue: DispatchQueue = .main, completion: @escaping (Result<Data, Error>) -> Void) {
-        let imageSideLength = 1000
+        let imageSideLength = 4000
         let url = URL(string: "https://picsum.photos/id/\(id)/\(imageSideLength)/\(imageSideLength)")!
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in
