@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum Item: Hashable {
+enum Item {
     case empty
     case loading
     case loaded(input: Int, output: Double)
